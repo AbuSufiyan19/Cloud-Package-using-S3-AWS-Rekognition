@@ -1,0 +1,154 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Navigation bar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Content section styles */
+main {
+    padding: 20px;
+}
+
+.content {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+}
+.contentupload {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    height: 40vh; /* Full viewport height */
+    padding: 50px; /* Optional padding */
+    background-color: #f4f4f4; /* Optional background color */
+}
+
+.form-container {
+    background-color: white; /* Background for the form */
+    padding: 50px; /* Padding around the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the form */
+}
+
+
+h2 {
+    color: #333;
+    font-size: 22px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Styling for the gallery container */
+.gallery {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Space items evenly */
+    gap: 16px; /* Space between cards */
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 20px;
+}
+
+/* Styling for each image card with fixed width and height */
+.image-item {
+    flex: 1 1 250px; /* Grow and shrink, minimum width of 250px */
+    height: 300px; /* Fixed height */
+    border: 1px solid #ccc; /* Optional: to give a card-like appearance */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: to add a shadow */
+    display: flex; /* Center image */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure images fit within the fixed card size */
+.image-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Crop the image to fill the card while maintaining aspect ratio */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .image-item {
+        flex: 1 1 45%; /* Adjust size on smaller screens */
+    }
+    .navbar {
+        flex-direction: column; /* Stack logo and links vertically */
+        text-align: center; /* Center align the text */
+    }
+    
+    .nav-links {
+        flex-direction: column; /* Stack nav links vertically */
+        padding: 0; /* Remove padding */
+    }
+
+    .nav-links li {
+        margin: 5px 0; /* Space between links */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-item {
+        flex: 1 1 100%; /* Full width on very small screens */
+    }
+}

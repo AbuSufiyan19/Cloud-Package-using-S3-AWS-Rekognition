@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery Home</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <%- include('navbar') %>
+    <section id="dashboard" class="content">
+        <h2 style="margin: 0; text-decoration: none;"><a style="text-decoration: none;" href="/">Dashboard</a></h2>
+        <h2>Search Images by Tag</h2>
+        <form action="/search" method="GET">
+            <input type="text" name="q" placeholder="Enter tag to search" required />
+            <button type="submit">Search</button>
+        </form>
+    
+        <h2>Image Gallery</h2>
+        <div class="gallery">
+            <% if (images && images.length > 0) { %>
+                <% images.forEach(image => { %>
+                    <div class="image-item">
+                        <img src="<%= image.url %>" alt="<%= image.key %>" />
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <p>No images found.</p>
+            <% } %>
+        </div>
+    </section>
+    
+    
+</body>
+</html>

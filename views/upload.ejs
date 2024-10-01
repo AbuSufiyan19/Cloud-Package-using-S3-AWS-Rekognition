@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery Home</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <%- include('navbar') %>    
+    <section id="upload" class="contentupload">
+        <h2>Upload Image</h2>
+        <div class="form-container">
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <div style="margin-top: 10px;">
+                    <label>Filename: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" name="filename" placeholder="Imagename" />
+                    <br>
+                </div>
+                <div style="margin-top: 10px;">    
+                    <label>Upload Image: </label>
+                    <input type="file" name="image" accept="image/*" required />
+                </div>
+                <br>
+                <button style="margin-top: 10px;" type="submit">Upload</button>
+            </form>
+        </div>
+    </section>  
+</body>
+</html>
