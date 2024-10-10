@@ -71,9 +71,15 @@ main {
     padding: 50px; /* Optional padding */
     background-color: #f4f4f4; /* Optional background color */
 }
+.search-button{
+    border-radius: 30px;
+    border: 2px solid #333; 
+    color: #333;
+    background-color: rgb(188, 188, 188);
+}
 
 .form-container {
-    background-color: white; /* Background for the form */
+    background-color: rgb(216, 216, 216); /* Background for the form */
     padding: 50px; /* Padding around the form */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the form */
